@@ -479,7 +479,7 @@ public enum SubdivisionsUnitedStates : String, SovereignStateSubdivision { // ht
         }
     }
     
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+    /*public var countiesType : (any SovereignStateLevel2Division.Type)? {
         switch self {
         case .alabama: return CountiesUnitedStatesAlabama.self
         case .alaska: return CountiesUnitedStatesAlaska.self
@@ -556,5 +556,5 @@ public enum SubdivisionsUnitedStates : String, SovereignStateSubdivision { // ht
         case .washington: return CitiesUnitedStatesWashington.self
         default: return nil
         }
-    }
+    }*/
 }

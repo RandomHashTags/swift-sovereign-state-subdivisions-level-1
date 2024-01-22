@@ -51,6 +51,7 @@ public protocol SovereignStateSubdivision : SovereignState { // https://en.wikip
     /// The neighboring subdivisions, in relation the its administrative borders.
     var neighbors : [any SovereignStateSubdivision] { get }
     
+    /*
     /// The level-2 administrative units' type this subdivision contains.
     var countiesType : (any SovereignStateLevel2Division.Type)? { get }
     /// The level-2 administrative units this subdivision contains.
@@ -60,6 +61,7 @@ public protocol SovereignStateSubdivision : SovereignState { // https://en.wikip
     var citiesType : (any SovereignStateCity.Type)? { get }
     /// The level-3 administrative units this subdivision contains.
     var cities : [any SovereignStateCity]? { get }
+     */
 }
 
 public extension SovereignStateSubdivision {
@@ -99,7 +101,7 @@ public extension SovereignStateSubdivision {
         return []
     }
     
-    var countiesType : (any SovereignStateLevel2Division.Type)? {
+    /*var countiesType : (any SovereignStateLevel2Division.Type)? {
         return nil
     }
     var counties : [any SovereignStateLevel2Division]? {
@@ -112,6 +114,7 @@ public extension SovereignStateSubdivision {
     var cities : [any SovereignStateCity]? {
         return citiesType?.allCases as? [any SovereignStateCity]
     }
+     */
     
     func wrapped() -> SovereignStateSubdivisionWrapper {
         return SovereignStateSubdivisionWrapper(self)
@@ -219,6 +222,7 @@ public struct SovereignStateSubdivisionWrapper : SovereignStateSubdivision, Sove
         return subdivision.neighbors
     }
     
+    /*
     public var countiesType : (any SovereignStateLevel2Division.Type)? {
         return subdivision.countiesType
     }
@@ -226,4 +230,5 @@ public struct SovereignStateSubdivisionWrapper : SovereignStateSubdivision, Sove
     public var citiesType : (any SovereignStateCity.Type)? {
         return subdivision.citiesType
     }
+     */
 }
