@@ -51,7 +51,7 @@ public extension Locale.Region {
         case .cambodia: return SubdivisionsCambodia.self
         case .cameroon: return SubdivisionsCameroon.self
         case .canada: return SubdivisionsCanada.self
-        case .capeVerde: return nil
+        case .capeVerde: return SubdivisionsCapeVerde.self
         case .centralAfricanRepublic: return SubdivisionsCentralAfricanRepublic.self
         case .chad: return SubdivisionsChad.self
         case .chile: return SubdivisionsChile.self

@@ -48,10 +48,25 @@ public extension SovereignStateSubdivision {
         self = subdivision as! Self
     }
     
+    var isoAlpha2 : String? {
+        return nil
+    }
+    var isoAlpha3 : String? {
+        return nil
+    }
+    
+    var currencies : [Currency] {
+        return [] // TODO: fix
+    }
+    
     var name : String {
         let table:String = "Subdivisions1\(country.name(forLocale: Locale.init(identifier: "en")).replacingOccurrences(of: " ", with: ""))"
         let key:String.LocalizationValue = String.LocalizationValue(stringLiteral: rawValue + "_name_short")
         return String(localized: key, table: table, bundle: Bundle.module)
+    }
+    
+    var neighbors : [any SovereignStateSubdivision] {
+        return []
     }
     
     func wrapped() -> SovereignStateSubdivisionWrapper {
