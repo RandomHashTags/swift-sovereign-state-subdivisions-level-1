@@ -60,7 +60,7 @@ public extension Locale.Region {
         case .comoros: return SubdivisionsComoros.self
         case .congoBrazzaville: return nil
         case .costaRica: return SubdivisionsCostaRica.self
-        case .croatia: return nil
+        case .croatia: return SubdivisionsCroatia.self
         case .cuba: return SubdivisionsCuba.self
         case .cyprus: return nil
         case .czechia: return SubdivisionsCzechRepublic.self
