@@ -193,7 +193,7 @@ public extension Locale.Region {
         case .saudiArabia: return nil
         case .senegal: return SubdivisionsSenegal.self
         case .serbia: return nil
-        case .seychelles: return nil
+        case .seychelles: return SubdivisionsSeychelles.self
         case .sierraLeone: return nil
         case .singapore: return nil
         case .slovakia: return SubdivisionsSlovakia.self
