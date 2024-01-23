@@ -88,7 +88,7 @@ public extension Locale.Region {
         case .gambia: return SubdivisionsGambia.self
         case .georgia: return nil
         case .germany: return SubdivisionsGermany.self
-        case .ghana: return nil
+        case .ghana: return SubdivisionsGhana.self
         case .greece: return SubdivisionsGreece.self
         case .greenland: return SubdivisionsGreenland.self
         case .grenada: return SubdivisionsGrenada.self
