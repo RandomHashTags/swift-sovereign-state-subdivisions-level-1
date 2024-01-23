@@ -51,12 +51,4 @@ public enum SubdivisionsLiechtenstein : String, SovereignStateSubdivision {
         case .vaduz: return "4/43/Flag_of_Vaduz_Liechtenstein-1"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

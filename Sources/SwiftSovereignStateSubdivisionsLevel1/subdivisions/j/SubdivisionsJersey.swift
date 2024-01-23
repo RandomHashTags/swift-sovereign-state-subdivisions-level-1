@@ -63,12 +63,4 @@ public enum SubdivisionsJersey : String, SovereignStateSubdivision { // https://
         case .trinity: return "https://comite.je/wp-content/uploads/sites/13/2021/09/icon-trinity.svg"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

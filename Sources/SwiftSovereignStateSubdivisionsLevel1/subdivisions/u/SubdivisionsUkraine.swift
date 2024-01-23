@@ -108,12 +108,4 @@ public enum SubdivisionsUkraine : String, SovereignStateSubdivision { // https:/
         case .sevastopol: return "1/14/Flag_of_Sevastopol"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

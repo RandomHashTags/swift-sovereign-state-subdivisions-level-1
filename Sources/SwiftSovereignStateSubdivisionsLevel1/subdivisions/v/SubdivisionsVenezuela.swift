@@ -128,12 +128,4 @@ public enum SubdivisionsVenezuela : String, SovereignStateSubdivision { // https
         case .capital_district: return "https://www.gdc.gob.ve/sistema/frontend/"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

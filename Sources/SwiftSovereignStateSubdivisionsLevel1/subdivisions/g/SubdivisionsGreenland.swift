@@ -32,12 +32,4 @@ public enum SubdivisionsGreenland : String, SovereignStateSubdivision { // https
         case .sermersooq: return "d/d5/Flag_of_Sermersooq%2C_Denmark"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

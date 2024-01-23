@@ -127,12 +127,4 @@ public enum SubdivisionsUruguay : String, SovereignStateSubdivision { // https:/
             return [SubdivisionsUruguay.cerro_largo, SubdivisionsUruguay.durazno, SubdivisionsUruguay.florida, SubdivisionsUruguay.lavalleja, SubdivisionsUruguay.rocha]
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

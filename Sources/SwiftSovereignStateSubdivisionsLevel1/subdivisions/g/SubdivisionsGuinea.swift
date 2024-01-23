@@ -40,12 +40,4 @@ public enum SubdivisionsGuinea : String, SovereignStateSubdivision {
             return "_Region"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

@@ -66,12 +66,4 @@ public enum SubdivisionsBermuda : String, SovereignStateSubdivision { // https:/
         case .st_george_s_town: return "e/ec/Flag_of_St._George%27s%2C_Bermuda.png"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

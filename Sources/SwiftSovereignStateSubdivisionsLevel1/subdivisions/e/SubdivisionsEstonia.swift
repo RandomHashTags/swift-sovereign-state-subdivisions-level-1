@@ -52,12 +52,4 @@ public enum SubdivisionsEstonia : String, SovereignStateSubdivision { // https:/
         case .voru: return "c/c1/Võrumaa_lipp"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

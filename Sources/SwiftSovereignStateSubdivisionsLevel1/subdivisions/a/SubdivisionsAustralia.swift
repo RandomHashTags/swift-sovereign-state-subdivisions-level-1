@@ -133,12 +133,4 @@ public enum SubdivisionsAustralia : String, SovereignStateSubdivision { // https
             return [SubdivisionsAustralia.coral_sea_islands]
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

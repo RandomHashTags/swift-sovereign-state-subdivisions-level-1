@@ -99,12 +99,4 @@ public enum SubdivisionsArgentina : String, SovereignStateSubdivision { // https
         case .tucuman: return "c/ce/Bandera_de_la_Provincia_de_Tucumán"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

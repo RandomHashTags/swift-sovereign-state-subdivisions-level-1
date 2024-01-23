@@ -52,12 +52,4 @@ public enum SubdivisionsIran : String, SovereignStateSubdivision { // https://en
     public var wikipediaURLSuffix : String? {
         return "_" + type_suffix.lowercased()
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

@@ -48,12 +48,4 @@ public enum SubdivisionsTurkmenistan : String, SovereignStateSubdivision { // ht
         default: return nil
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

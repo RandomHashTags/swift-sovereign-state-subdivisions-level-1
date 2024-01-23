@@ -49,12 +49,4 @@ public enum SubdivisionsAustria : String, SovereignStateSubdivision { // https:/
         case .vorarlberg: return "a/a7/Flag_of_Vorarlberg_%28state%29"
         }
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }

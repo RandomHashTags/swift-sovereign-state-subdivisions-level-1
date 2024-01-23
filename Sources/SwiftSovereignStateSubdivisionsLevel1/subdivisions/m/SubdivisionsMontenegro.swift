@@ -45,12 +45,4 @@ public enum SubdivisionsMontenegro : String, SovereignStateSubdivision { // http
     public var wikipediaURLSuffix : String? {
         return nil
     }
-    
-    public var countiesType : (any SovereignStateLevel2Division.Type)? {
-        return nil
-    }
-    
-    public var citiesType : (any SovereignStateCity.Type)? {
-        return nil
-    }
 }
