@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsPanama : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Panama
     case bocas_del_toro

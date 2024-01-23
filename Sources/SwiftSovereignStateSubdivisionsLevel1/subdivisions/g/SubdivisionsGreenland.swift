@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsGreenland : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Administrative_divisions_of_Greenland
     case avannaata

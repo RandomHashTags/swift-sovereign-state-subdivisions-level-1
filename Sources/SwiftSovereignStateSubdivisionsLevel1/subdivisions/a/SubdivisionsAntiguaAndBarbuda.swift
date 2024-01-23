@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsAntiguaAndBarbuda : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Parishes_and_dependencies_of_Antigua_and_Barbuda
     case saint_george

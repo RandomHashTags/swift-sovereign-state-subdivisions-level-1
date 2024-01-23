@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsKosovo : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_Kosovo
     case ferizaj

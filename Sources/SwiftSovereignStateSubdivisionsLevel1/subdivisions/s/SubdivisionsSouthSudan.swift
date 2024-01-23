@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSouthSudan : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/States_of_South_Sudan
     case central_equatoria

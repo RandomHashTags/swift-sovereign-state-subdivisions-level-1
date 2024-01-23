@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBurkinaFaso : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Burkina_Faso
     case boucle_du_mouhoun

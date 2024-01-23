@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsTogo : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Togo
     case centrale

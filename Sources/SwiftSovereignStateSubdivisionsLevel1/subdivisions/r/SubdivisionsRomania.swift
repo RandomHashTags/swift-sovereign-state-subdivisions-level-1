@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsRomania : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Counties_of_Romania
     case alba

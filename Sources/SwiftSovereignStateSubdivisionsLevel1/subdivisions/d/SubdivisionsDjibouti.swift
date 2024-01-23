@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsDjibouti : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Djibouti
     case ali_sabieh

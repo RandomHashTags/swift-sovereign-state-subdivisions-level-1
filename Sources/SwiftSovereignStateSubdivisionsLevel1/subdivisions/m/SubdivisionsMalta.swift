@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMalta : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Local_councils_of_Malta
     case attard

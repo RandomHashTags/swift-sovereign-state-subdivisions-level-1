@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsJersey : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Parishes_of_Jersey
     case grouville

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-sovereign-states",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RandomHashTags/swift-sovereign-states.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e9db20ccaa8104315ae8c4d45a910875a1d7d3e4"
+      }
+    }
+  ],
+  "version" : 2
+}

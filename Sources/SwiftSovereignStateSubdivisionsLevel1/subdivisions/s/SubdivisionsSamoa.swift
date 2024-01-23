@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSamoa : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_Samoa
     case a_ana

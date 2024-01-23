@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBermuda : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Administrative_divisions_of_Bermuda
     case devonshire

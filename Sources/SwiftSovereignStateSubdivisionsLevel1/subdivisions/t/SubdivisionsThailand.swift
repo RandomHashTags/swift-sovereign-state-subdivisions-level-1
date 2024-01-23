@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsThailand : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Thailand
     case amnat_charoen

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBahamas : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Local_government_in_The_Bahamas
     case acklins

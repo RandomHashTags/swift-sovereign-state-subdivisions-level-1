@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsNorthMacedonia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Municipalities_of_North_Macedonia // TODO: fix - 84 subdivisions, but it says only 80 ?????????
     case bro

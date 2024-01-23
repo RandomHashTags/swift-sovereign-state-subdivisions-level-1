@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSlovakia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Slovakia
     case banska_bystrica

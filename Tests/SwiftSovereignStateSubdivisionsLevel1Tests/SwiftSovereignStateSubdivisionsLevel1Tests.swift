@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import SwiftSovereignStateSubdivisionsLevel1
+import SwiftSovereignStates
 
 final class SwiftSovereignStateSubdivisionsLevel1Tests : XCTestCase {
     func testExample() throws {

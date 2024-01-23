@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsZambia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Zambia
     case central

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsIvoryCoast : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_Ivory_Coast
     case bas_sassandra

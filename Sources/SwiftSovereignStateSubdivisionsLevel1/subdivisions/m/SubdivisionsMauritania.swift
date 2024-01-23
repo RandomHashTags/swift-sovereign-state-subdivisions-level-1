@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMauritania : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Mauritania
     case adrar

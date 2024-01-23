@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSomalia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/States_and_regions_of_Somalia
     case galmudug

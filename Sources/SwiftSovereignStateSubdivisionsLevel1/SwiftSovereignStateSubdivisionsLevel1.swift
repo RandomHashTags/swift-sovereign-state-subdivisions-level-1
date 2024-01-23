@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public extension Locale.Region {
     /// The level-1 administrative units this Region claims territorial ownership of.

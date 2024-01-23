@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsPeru : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Peru
     case amazonas

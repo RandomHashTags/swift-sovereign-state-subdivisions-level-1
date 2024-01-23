@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSouthAfrica : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_South_Africa
     case eastern_cape

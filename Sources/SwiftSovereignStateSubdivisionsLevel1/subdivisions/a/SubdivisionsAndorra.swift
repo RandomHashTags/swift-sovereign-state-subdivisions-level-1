@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsAndorra : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Parishes_of_Andorra
     case andorra_la_vella

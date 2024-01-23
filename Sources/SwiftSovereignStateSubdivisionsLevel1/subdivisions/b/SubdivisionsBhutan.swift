@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBhutan : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_Bhutan
     case bumthang

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsCentralAfricanRepublic : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Prefectures_of_the_Central_African_Republic
     case bamingui_bangoran

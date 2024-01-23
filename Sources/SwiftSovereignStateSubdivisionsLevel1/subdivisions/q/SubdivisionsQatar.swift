@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsQatar : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Municipalities_of_Qatar
     case ad_dawhah

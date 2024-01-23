@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsCambodia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Cambodia
     case banteay_meanchey

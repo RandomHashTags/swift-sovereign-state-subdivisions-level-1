@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsEgypt : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Governorates_of_Egypt
     case alexandria

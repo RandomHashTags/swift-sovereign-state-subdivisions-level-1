@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsNewZealand : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_New_Zealand
     case auckland

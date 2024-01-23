@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsGuinea : String, SovereignStateSubdivision {
     case boke

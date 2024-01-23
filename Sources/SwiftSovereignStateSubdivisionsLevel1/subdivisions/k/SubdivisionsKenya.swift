@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsKenya : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Counties_of_Kenya
     case baringo

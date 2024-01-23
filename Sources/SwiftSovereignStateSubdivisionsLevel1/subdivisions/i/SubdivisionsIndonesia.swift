@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsIndonesia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Indonesia
     case aceh

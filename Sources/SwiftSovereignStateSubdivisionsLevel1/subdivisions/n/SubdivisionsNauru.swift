@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsNauru : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/List_of_settlements_in_Nauru
     case aiwo

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMauritius : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_Mauritius | TODO: these are level-2 administrative divisions!
     case flacq

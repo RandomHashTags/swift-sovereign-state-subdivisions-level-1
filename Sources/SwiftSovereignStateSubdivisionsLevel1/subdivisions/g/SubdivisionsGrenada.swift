@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsGrenada : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Parishes_of_Grenada
     case saint_andrew

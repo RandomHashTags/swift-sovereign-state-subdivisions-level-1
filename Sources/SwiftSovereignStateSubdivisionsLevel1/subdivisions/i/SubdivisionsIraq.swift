@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsIraq : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Governorates_of_Iraq
     case al_anbar

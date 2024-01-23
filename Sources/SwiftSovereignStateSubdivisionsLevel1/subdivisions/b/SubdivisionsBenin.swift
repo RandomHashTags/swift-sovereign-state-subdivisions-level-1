@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBenin : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Departments_of_Benin
     case alibori

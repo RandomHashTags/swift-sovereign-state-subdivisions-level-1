@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsCzechRepublic : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_the_Czech_Republic
     case central_bohemian

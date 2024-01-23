@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsDominica : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Parishes_of_Dominica
     case saint_andrew

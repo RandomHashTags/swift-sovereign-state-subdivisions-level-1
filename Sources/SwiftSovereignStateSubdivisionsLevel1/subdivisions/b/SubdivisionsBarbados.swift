@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBarbados : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Parishes_of_Barbados
     case christ_church

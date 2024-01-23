@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBulgaria : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Bulgaria
     case blagoevgrad

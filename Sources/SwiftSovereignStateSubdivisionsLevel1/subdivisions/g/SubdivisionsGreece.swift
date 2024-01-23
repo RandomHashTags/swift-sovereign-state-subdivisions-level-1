@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsGreece : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Administrative_regions_of_Greece
     case attica

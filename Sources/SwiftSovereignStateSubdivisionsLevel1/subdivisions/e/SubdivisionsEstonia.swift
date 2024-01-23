@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsEstonia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Counties_of_Estonia
     case harju

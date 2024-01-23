@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMorocco : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Morocco
     case beni_mellal_khenifra

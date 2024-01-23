@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsItaly : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Italy
     case abruzzo

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsParaguay : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Departments_of_Paraguay
     case alto_paraguay

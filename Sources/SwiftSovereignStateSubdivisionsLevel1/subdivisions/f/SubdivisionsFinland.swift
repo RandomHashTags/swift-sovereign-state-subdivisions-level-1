@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsFinland : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Finland
     case aland

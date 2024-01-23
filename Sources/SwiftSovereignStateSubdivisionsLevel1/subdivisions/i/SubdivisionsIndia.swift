@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsIndia : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/States_and_union_territories_of_India
     case andhra_pradesh

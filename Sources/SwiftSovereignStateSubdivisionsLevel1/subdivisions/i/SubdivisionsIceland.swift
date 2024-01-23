@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsIceland : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Municipalities_of_Iceland
     case akrahreppur

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsPhilippines : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_the_Philippines
     case abra

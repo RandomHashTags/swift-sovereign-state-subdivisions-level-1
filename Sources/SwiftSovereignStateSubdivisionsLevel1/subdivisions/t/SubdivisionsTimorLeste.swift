@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsTimorLeste : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Municipalities_of_East_Timor
     case aileu

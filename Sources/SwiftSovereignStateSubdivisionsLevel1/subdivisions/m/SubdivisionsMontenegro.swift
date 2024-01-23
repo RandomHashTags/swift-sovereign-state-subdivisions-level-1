@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMontenegro : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Municipalities_of_Montenegro
     case andrijevica

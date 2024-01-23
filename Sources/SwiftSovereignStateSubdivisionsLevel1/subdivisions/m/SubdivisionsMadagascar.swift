@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMadagascar : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Madagascar
     case alaotra_mangoro

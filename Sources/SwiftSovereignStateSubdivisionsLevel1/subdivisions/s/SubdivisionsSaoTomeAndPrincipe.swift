@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSaoTomeAndPrincipe : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_São_Tomé_and_Pr%C3%ADncipe
     case agua_grande

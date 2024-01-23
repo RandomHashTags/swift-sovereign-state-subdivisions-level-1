@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsKyrgyzstan : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Kyrgyzstan
     case batken

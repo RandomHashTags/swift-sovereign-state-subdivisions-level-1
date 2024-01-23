@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBurundi : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Burundi
     case bubanza

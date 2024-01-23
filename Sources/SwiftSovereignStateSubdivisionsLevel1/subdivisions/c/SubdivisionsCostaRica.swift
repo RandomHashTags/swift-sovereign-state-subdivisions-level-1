@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsCostaRica : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Costa_Rica
     case alajuela

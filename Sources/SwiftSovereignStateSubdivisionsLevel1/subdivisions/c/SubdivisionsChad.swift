@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsChad : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Regions_of_Chad
     case bahr_el_gazel

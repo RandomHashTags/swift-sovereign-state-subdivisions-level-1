@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBotswana : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Districts_of_Botswana
     case central

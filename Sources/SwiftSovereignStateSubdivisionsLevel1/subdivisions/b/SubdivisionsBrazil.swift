@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBrazil : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Federative_units_of_Brazil
     case acre

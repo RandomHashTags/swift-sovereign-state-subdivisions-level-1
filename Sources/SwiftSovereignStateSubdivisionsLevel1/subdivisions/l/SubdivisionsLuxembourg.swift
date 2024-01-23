@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsLuxembourg : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Cantons_of_Luxembourg
     case capellen

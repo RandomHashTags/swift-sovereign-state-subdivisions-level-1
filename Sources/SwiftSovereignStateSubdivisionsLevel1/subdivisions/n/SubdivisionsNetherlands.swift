@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsNetherlands : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_the_Netherlands
     case drenthe

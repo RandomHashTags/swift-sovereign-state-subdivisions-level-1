@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsPoland : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Voivodeships_of_Poland
     case greater_poland

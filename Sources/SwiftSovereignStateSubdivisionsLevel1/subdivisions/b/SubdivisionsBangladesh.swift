@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsBangladesh : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Divisions_of_Bangladesh
     case barishal

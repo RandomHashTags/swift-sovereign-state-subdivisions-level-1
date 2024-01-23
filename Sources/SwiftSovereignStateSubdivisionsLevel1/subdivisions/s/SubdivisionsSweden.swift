@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsSweden : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Counties_of_Sweden
     case blekinge

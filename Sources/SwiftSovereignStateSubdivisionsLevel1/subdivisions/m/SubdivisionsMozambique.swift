@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMozambique : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Provinces_of_Mozambique
     case cabo_delgado

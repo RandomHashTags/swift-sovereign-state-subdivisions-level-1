@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftSovereignStates
 
 public enum SubdivisionsMaldives : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Administrative_divisions_of_the_Maldives
     case alif_alif
