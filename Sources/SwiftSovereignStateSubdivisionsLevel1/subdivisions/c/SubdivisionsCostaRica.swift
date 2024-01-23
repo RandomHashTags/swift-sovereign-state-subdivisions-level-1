@@ -55,4 +55,12 @@ public enum SubdivisionsCostaRica : String, SovereignStateSubdivision { // https
             return [SubdivisionsCostaRica.puntarenas, SubdivisionsCostaRica.limon, SubdivisionsCostaRica.cartago, SubdivisionsCostaRica.heredia, SubdivisionsCostaRica.alajuela]
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

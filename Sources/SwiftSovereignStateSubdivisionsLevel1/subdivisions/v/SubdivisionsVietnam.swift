@@ -170,4 +170,12 @@ public enum SubdivisionsVietnam : String, SovereignStateSubdivision { // https:/
         case .yen_bai: return "https://yenbai.gov.vn"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

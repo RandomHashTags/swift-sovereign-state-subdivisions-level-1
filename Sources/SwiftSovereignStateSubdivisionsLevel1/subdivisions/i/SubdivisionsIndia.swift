@@ -161,4 +161,12 @@ public enum SubdivisionsIndia : String, SovereignStateSubdivision { // https://e
         case .puducherry: return "1/12/Seal_of_Puducherry"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

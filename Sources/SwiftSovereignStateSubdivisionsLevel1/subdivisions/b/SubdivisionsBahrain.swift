@@ -30,4 +30,12 @@ public enum SubdivisionsBahrain : String, SovereignStateSubdivision { // https:/
         case .southern: return "2/2b/Bahrain_Southern_Governorate_Flag"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

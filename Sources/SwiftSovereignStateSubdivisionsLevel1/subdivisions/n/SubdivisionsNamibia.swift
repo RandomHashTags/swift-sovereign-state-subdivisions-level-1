@@ -42,4 +42,12 @@ public enum SubdivisionsNamibia : String, SovereignStateSubdivision { // https:/
             return "_" + type_suffix
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

@@ -52,4 +52,12 @@ public enum SubdivisionsLiberia : String, SovereignStateSubdivision { // https:/
         case .sinoe: return "a/ae/Flag_of_Sinoe_County"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

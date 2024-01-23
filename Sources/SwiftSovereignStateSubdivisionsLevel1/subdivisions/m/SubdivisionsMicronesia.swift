@@ -39,4 +39,12 @@ public enum SubdivisionsMicronesia : String, SovereignStateSubdivision {
         case .yap: return "2/2c/Flag_of_Yap"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

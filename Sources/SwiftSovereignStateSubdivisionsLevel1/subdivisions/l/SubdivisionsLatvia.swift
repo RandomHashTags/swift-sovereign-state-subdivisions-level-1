@@ -138,4 +138,12 @@ public enum SubdivisionsLatvia : String, SovereignStateSubdivision { // https://
         case .ventspils_city: return "2/26/Flag_of_Ventspils"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

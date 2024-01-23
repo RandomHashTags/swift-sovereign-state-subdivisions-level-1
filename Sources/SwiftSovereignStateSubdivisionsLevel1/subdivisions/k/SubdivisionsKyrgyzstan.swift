@@ -41,4 +41,12 @@ public enum SubdivisionsKyrgyzstan : String, SovereignStateSubdivision { // http
             return "_" + type_suffix
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

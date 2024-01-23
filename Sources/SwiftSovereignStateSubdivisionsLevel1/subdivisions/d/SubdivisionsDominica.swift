@@ -56,4 +56,12 @@ public enum SubdivisionsDominica : String, SovereignStateSubdivision { // https:
             return [SubdivisionsDominica.saint_john, SubdivisionsDominica.saint_andrew, SubdivisionsDominica.saint_joseph]
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

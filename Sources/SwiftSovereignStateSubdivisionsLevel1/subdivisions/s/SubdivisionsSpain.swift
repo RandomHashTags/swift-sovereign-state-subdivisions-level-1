@@ -77,4 +77,12 @@ public enum SubdivisionsSpain : String, SovereignStateSubdivision { // https://e
         case .melilla: return "f/f7/Flag_of_Melilla"
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }

@@ -82,4 +82,12 @@ public enum SubdivisionsZimbabwe : String, SovereignStateSubdivision { // https:
             return [SubdivisionsZimbabwe.mashonaland_west, SubdivisionsZimbabwe.mashonaland_east, SubdivisionsZimbabwe.masvingo, SubdivisionsZimbabwe.matabeleland_south, SubdivisionsZimbabwe.matabeleland_north]
         }
     }
+    
+    public var countiesType : (any SovereignStateLevel2Division.Type)? {
+        return nil
+    }
+    
+    public var citiesType : (any SovereignStateCity.Type)? {
+        return nil
+    }
 }
