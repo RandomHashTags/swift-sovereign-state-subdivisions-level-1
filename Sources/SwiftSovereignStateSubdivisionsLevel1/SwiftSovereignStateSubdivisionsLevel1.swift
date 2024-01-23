@@ -97,7 +97,7 @@ public extension Locale.Region {
         case .guatemala: return SubdivisionsGuatemala.self
         case .guinea: return SubdivisionsGuinea.self
         case .guineaBissau: return nil
-        case .guyana: return nil
+        case .guyana: return SubdivisionsGuyana.self
             
         case .haiti: return SubdivisionsHaiti.self
         case .honduras: return SubdivisionsHonduras.self
