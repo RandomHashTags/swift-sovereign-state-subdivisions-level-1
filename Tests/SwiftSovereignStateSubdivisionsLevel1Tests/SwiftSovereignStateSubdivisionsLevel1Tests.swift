@@ -10,13 +10,16 @@ import XCTest
 import SwiftSovereignStates
 
 final class SwiftSovereignStateSubdivisionsLevel1Tests : XCTestCase {
-    func testExample() throws {
+    func testExample() {
+        for country in Locale.Region.allCases {
+            XCTAssertNotNil(country.subdivisionType, country.name())
+        }
     }
     
     func test_foundations() {
         let unitedStates:Locale.Region = Locale.Region.unitedStates
         XCTAssert(SovereignStateSubdivisions.getAllMentioned("", options: []).isEmpty)
-        XCTAssert(SovereignStateSubdivisions.valueOfCacheID("") == nil)
+        XCTAssertNil(SovereignStateSubdivisions.valueOfCacheID(""))
         
         let minnesota:any SovereignStateSubdivision = SubdivisionsUnitedStates.minnesota
         XCTAssertEqual(minnesota.rawValue, "minnesota")
@@ -50,16 +53,16 @@ extension SwiftSovereignStateSubdivisionsLevel1Tests {
         
         
         var subdivision:(any SovereignStateSubdivision)? = SubdivisionsUnitedStates.init("US-minnesota") // [LosslessStringConvertible]
-        XCTAssert(subdivision != nil)
+        XCTAssertNotNil(subdivision)
         
         subdivision = SubdivisionsUnitedStates.init(rawValue: "minnesota") // [RawRepresentable]
-        XCTAssert(subdivision != nil)
+        XCTAssertNotNil(subdivision)
         
         subdivision = Locale.Region.unitedStates.valueOfSubdivisionIdentifier("minnesota")
-        XCTAssert(subdivision != nil)
+        XCTAssertNotNil(subdivision)
         
         subdivision = SovereignStateSubdivisions.valueOfCacheID("US-minnesota")
-        XCTAssert(subdivision != nil)
+        XCTAssertNotNil(subdivision)
         
         var all:[any SovereignStateSubdivision] = SovereignStateSubdivisions.getAllMentioned("Minnesota", options: [])
         XCTAssertEqual(all.count, 1)

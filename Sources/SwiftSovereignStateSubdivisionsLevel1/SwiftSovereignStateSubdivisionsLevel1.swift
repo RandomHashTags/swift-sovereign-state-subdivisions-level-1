@@ -43,7 +43,7 @@ public extension Locale.Region {
         case .bosniaHerzegovina: return nil
         case .botswana: return SubdivisionsBotswana.self
         case .brazil: return SubdivisionsBrazil.self
-        case .brunei: return nil
+        case .brunei: return SubdivisionsBrunei.self
         case .bulgaria: return SubdivisionsBulgaria.self
         case .burkinaFaso: return SubdivisionsBurkinaFaso.self
         case .burundi: return SubdivisionsBurundi.self
