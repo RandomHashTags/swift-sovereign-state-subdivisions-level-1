@@ -56,7 +56,7 @@ public extension Locale.Region {
         case .chad: return SubdivisionsChad.self
         case .chile: return SubdivisionsChile.self
         case .chinaMainland: return nil
-        case .colombia: return nil
+        case .colombia: return SubdivisionsColombia.self
         case .comoros: return SubdivisionsComoros.self
         case .congoBrazzaville: return nil
         case .costaRica: return SubdivisionsCostaRica.self
