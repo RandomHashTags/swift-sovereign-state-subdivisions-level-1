@@ -122,4 +122,14 @@ extension SwiftSovereignStateSubdivisionsLevel1Tests {
             }
         }
     }
+    
+    func test_flag_url() {
+        for subdivision in SovereignStateSubdivisions.all {
+            XCTAssertNotNil(subdivision.flagURL, subdivision.cacheID)
+        }
+    }
+    
+    func test_locale_region() {
+        print("regions=\(Locale.Region.isoRegions)")
+    }
 }
