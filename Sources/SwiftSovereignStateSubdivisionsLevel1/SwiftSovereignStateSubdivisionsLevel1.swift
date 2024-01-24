@@ -186,7 +186,7 @@ public extension Locale.Region {
         case .russia: return nil
         case .rwanda: return SubdivisionsRwanda.self
         
-        case .saintKittsNevis: return nil
+        case .saintKittsNevis: return SubdivisionsSaintKittsAndNevis.self
         case .saintLucia: return nil
         case .saintVincentGrenadines: return nil
         case .samoa: return SubdivisionsSamoa.self
