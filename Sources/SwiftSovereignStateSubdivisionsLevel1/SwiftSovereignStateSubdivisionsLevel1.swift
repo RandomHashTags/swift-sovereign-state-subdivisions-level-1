@@ -163,7 +163,7 @@ public extension Locale.Region {
         case .nicaragua: return SubdivisionsNicaragua.self
         case .niger: return SubdivisionsNiger.self
         case .nigeria: return SubdivisionsNigeria.self
-        case .northKorea: return nil
+        case .northKorea: return SubdivisionsNorthKorea.self
         case .northMacedonia: return nil
         case .norway: return SubdivisionsNorway.self
             
