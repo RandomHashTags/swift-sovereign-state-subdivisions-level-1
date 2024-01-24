@@ -120,12 +120,8 @@ extension SwiftSovereignStateSubdivisionsLevel1Tests {
             
             for subdivision in SovereignStateSubdivisions.all {
                 let string:String = subdivision.name
-                if string.elementsEqual("nil") {
-                    missing.append(subdivision.cacheID)
-                }
+                XCTAssert(!string.hasSuffix("_name_short"), "language=" + language + ";subdivision=" + subdivision.cacheID)
             }
-            XCTAssert(missing.isEmpty, "test_localization; language=\"" + language + "\"; missing \(missing.count) level-1 subdivision names for " + missing.description)
-            missing.removeAll()
             
             for type in SovereignStateSubdivisionType.allCases {
                 let string:String = SwiftSovereignStateLocalization.get_release_subdivision_type_name_singular(type)

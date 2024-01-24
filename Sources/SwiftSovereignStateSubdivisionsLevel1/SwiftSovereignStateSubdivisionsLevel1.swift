@@ -16,6 +16,7 @@ public extension Locale.Region {
     }
     var subdivisionType : (any SovereignStateSubdivision.Type)? {
         switch self {
+        case .abkhazia: return SubdivisionsAbkhazia.self
         case .afghanistan: return SubdivisionsAfghanistan.self
         case .albania: return SubdivisionsAlbania.self
         case .algeria: return SubdivisionsAlgeria.self
