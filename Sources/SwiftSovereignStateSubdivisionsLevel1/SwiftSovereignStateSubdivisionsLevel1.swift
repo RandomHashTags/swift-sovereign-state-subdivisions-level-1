@@ -153,7 +153,7 @@ public extension Locale.Region {
         case .montenegro: return SubdivisionsMontenegro.self
         case .morocco: return SubdivisionsMorocco.self
         case .mozambique: return SubdivisionsMozambique.self
-        case .myanmar: return nil
+        case .myanmar: return SubdivisionsMyanmar.self
         
         case .namibia: return SubdivisionsNamibia.self
         case .nauru: return SubdivisionsNauru.self

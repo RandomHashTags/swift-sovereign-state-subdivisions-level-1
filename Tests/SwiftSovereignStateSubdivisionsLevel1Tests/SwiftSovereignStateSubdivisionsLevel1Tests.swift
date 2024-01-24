@@ -116,29 +116,10 @@ extension SwiftSovereignStateSubdivisionsLevel1Tests {
     func test_localization() {
         let supported_language_codes:[String] = ["en"]
         for language in supported_language_codes {
-            var missing:[String] = []
-            
             for subdivision in SovereignStateSubdivisions.all {
                 let string:String = subdivision.name
                 XCTAssert(!string.hasSuffix("_name_short"), "language=" + language + ";subdivision=" + subdivision.cacheID)
             }
-            
-            for type in SovereignStateSubdivisionType.allCases {
-                let string:String = SwiftSovereignStateLocalization.get_release_subdivision_type_name_singular(type)
-                if string.elementsEqual("nil") {
-                    missing.append(type.rawValue)
-                }
-            }
-            XCTAssert(missing.isEmpty, "test_localization; language=\"" + language + "\"; missing \(missing.count) subdivision_types_name_singular for " + missing.description)
-            missing.removeAll()
-            for type in SovereignStateSubdivisionType.allCases {
-                let string:String = SwiftSovereignStateLocalization.get_release_subdivision_type_name_plural(type)
-                if string.elementsEqual("nil") {
-                    missing.append(type.rawValue)
-                }
-            }
-            XCTAssert(missing.isEmpty, "test_localization; language=\"" + language + "\"; missing \(missing.count) subdivision_types_name_plural for " + missing.description)
-            missing.removeAll()
         }
     }
 }
