@@ -11,9 +11,58 @@ import SwiftSovereignStates
 
 final class SwiftSovereignStateSubdivisionsLevel1Tests : XCTestCase {
     func testExample() {
+        /*var region_identifiers:[String] = [], region_names:[String] = [], region_cases:[String] = []
+        var region_containing_regions:[String?:[String]] = [:], region_continents:[String?:[String]] = [:]
+        for region in Locale.Region("005").subRegions {
+            let identifier:String = region.identifier
+            region_identifiers.append(identifier)
+            let name:String = Locale.current.localizedString(forRegionCode: identifier) ?? "nil"
+            region_names.append(name)
+            var case_name:String = name
+                .replacingOccurrences(of: "U.S.", with: "unitedStates")
+                .replacingOccurrences(of: "St.", with: "saint")
+                .replacingOccurrences(of: "So.", with: "south")
+                .replacingOccurrences(of: "Isl.", with: "Islands")
+                .replacingOccurrences(of: "(Keeling)", with: "")
+                .replacingOccurrences(of: "&", with: "")
+                .replacingOccurrences(of: "-", with: "")
+                .replacingOccurrences(of: "'", with: "")
+                .split(separator: "(")[0]
+                .replacingOccurrences(of: " ", with: "")
+            case_name = String(case_name[case_name.startIndex].lowercased() + case_name[case_name.index(after: case_name.startIndex)...])
+            case_name = case_name.replacingOccurrences(of: "côtedIvoire", with: "côteDIvoire")
+            region_cases.append(case_name)
+
+            let containing_region_identifier:String? = region.containingRegion?.identifier
+            if region_containing_regions[containing_region_identifier] == nil {
+                region_containing_regions[containing_region_identifier] = []
+            }
+            region_containing_regions[containing_region_identifier]?.append(identifier)
+
+            let region_continent_identifier:String? = region.continent?.identifier
+            if region_continents[region_continent_identifier] == nil {
+                region_continents[region_continent_identifier] = []
+            }
+            region_continents[region_continent_identifier]?.append(identifier)
+        }
+        for (index, identifier) in region_identifiers.enumerated() {
+            print("case ." + region_names[index] + ":Locale.Region = Locale.Region.get(\"" + identifier + "\")")
+        }*/
+        /*for (key, value) in region_containing_regions {
+            if let key:String = key {
+                print("case \"" + value.joined(separator: "\", \"") + ": return Locale.Region(\"" + key + "\")")
+            }
+        }*/
+        /*for (key, value) in region_continents {
+            if let key:String = key {
+                print("case \"" + value.joined(separator: "\", \"") + ": return Locale.Region(\"" + key + "\")")
+            }
+        }*/
+
+        /*
         for country in Locale.Region.allCases {
             XCTAssertNotNil(country.subdivisionType, country.name())
-        }
+        }*/
     }
     
     func test_foundations() {

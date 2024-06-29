@@ -8,277 +8,288 @@
 import Foundation
 import SwiftSovereignStates
 
-public extension Locale.Region {
-    /// The level-1 administrative units this Region claims territorial ownership of.
-    var subdivisions : [any SovereignStateSubdivision]? {
-        guard let subdivisionType:any SovereignStateSubdivision.Type = subdivisionType else { return nil }
-        return (subdivisionType.allCases as! [any SovereignStateSubdivision])
+@attached(member, names: arbitrary)
+macro SubdivisionLevel1(region: Locale.Region, allSameType: Bool, type: Locale.Region.SubdivisionType) = #externalMacro(module: "Macros", type: "SubdivisionLevel1")
+
+// MARK: Locale.Region.Subdivision.Level1
+public extension Locale.Region.Subdivision {
+    enum Level1 {
     }
-    var subdivisionType : (any SovereignStateSubdivision.Type)? {
+    protocol Level1Protocol : Locale.Region.SubdivisionProtocol {
+        var neighbors : [any Locale.Region.Subdivision.Level1Protocol] { get }
+    }
+}
+public extension Locale.Region.Subdivision.Level1Protocol {
+    var neighbors : [any Locale.Region.Subdivision.Level1Protocol] { [] }
+}
+
+// MARK: Locale.Region subdivisionLevel1Type
+public extension Locale.Region {
+    var subdivisionLevel1Type : (any Locale.Region.Subdivision.Level1Protocol.Type)? {
         switch self {
-        case .abkhazia: return SubdivisionsAbkhazia.self
-        case .afghanistan: return SubdivisionsAfghanistan.self
-        case .albania: return SubdivisionsAlbania.self
-        case .algeria: return SubdivisionsAlgeria.self
-        case .andorra: return SubdivisionsAndorra.self
-        case .angola: return SubdivisionsAngola.self
-        case .anguilla: return SubdivisionsAnguilla.self
+        case .abkhazia: return SubdivisionsAbkhaziaLevel1.self
+        case .afghanistan: return SubdivisionsAfghanistanLevel1.self
+        case .albania: return SubdivisionsAlbaniaLevel1.self
+        case .algeria: return SubdivisionsAlgeriaLevel1.self
+        case .andorra: return SubdivisionsAndorraLevel1.self
+        case .angola: return SubdivisionsAngolaLevel1.self
+        case .anguilla: return SubdivisionsAnguillaLevel1.self
         case .antarctica: return nil
-        case .antiguaBarbuda: return SubdivisionsAntiguaAndBarbuda.self
-        case .argentina: return SubdivisionsArgentina.self
-        case .armenia: return SubdivisionsArmenia.self
+        case .antiguaBarbuda: return SubdivisionsAntiguaAndBarbudaLevel1.self
+        case .argentina: return SubdivisionsArgentinaLevel1.self
+        case .armenia: return SubdivisionsArmeniaLevel1.self
         case .aruba: return nil
         case .ålandIslands: return nil
-        case .australia: return SubdivisionsAustralia.self
-        case .austria: return SubdivisionsAustria.self
-        case .azerbaijan: return SubdivisionsAzerbaijan.self
+        case .australia: return SubdivisionsAustraliaLevel1.self
+        case .austria: return SubdivisionsAustriaLevel1.self
+        case .azerbaijan: return SubdivisionsAzerbaijanLevel1.self
         
-        case .bahamas: return SubdivisionsBahamas.self
-        case .bahrain: return SubdivisionsBahrain.self
-        case .bangladesh: return SubdivisionsBangladesh.self
-        case .barbados: return SubdivisionsBarbados.self
-        case .belarus: return SubdivisionsBelarus.self
-        case .belize: return SubdivisionsBelize.self
-        case .benin: return SubdivisionsBenin.self
-        case .bermuda: return SubdivisionsBermuda.self
-        case .bhutan: return SubdivisionsBhutan.self
-        case .bolivia: return SubdivisionsBolivia.self
+        case .bahamas: return SubdivisionsBahamasLevel1.self
+        case .bahrain: return SubdivisionsBahrainLevel1.self
+        case .bangladesh: return SubdivisionsBangladeshLevel1.self
+        case .barbados: return SubdivisionsBarbadosLevel1.self
+        case .belarus: return SubdivisionsBelarusLevel1.self
+        case .belize: return SubdivisionsBelizeLevel1.self
+        case .benin: return SubdivisionsBeninLevel1.self
+        case .bermuda: return SubdivisionsBermudaLevel1.self
+        case .bhutan: return SubdivisionsBhutanLevel1.self
+        case .bolivia: return SubdivisionsBoliviaLevel1.self
         case .bosniaHerzegovina: return nil
-        case .botswana: return SubdivisionsBotswana.self
+        case .botswana: return SubdivisionsBotswanaLevel1.self
         case .bouvetIsland: return nil
-        case .brazil: return SubdivisionsBrazil.self
+        case .brazil: return SubdivisionsBrazilLevel1.self
         case .britishVirginIslands: return nil
-        case .brunei: return SubdivisionsBrunei.self
-        case .bulgaria: return SubdivisionsBulgaria.self
-        case .burkinaFaso: return SubdivisionsBurkinaFaso.self
-        case .burundi: return SubdivisionsBurundi.self
+        case .brunei: return SubdivisionsBruneiLevel1.self
+        case .bulgaria: return SubdivisionsBulgariaLevel1.self
+        case .burkinaFaso: return SubdivisionsBurkinaFasoLevel1.self
+        case .burundi: return SubdivisionsBurundiLevel1.self
         
-        case .cambodia: return SubdivisionsCambodia.self
-        case .cameroon: return SubdivisionsCameroon.self
-        case .canada: return SubdivisionsCanada.self
-        case .capeVerde: return SubdivisionsCapeVerde.self
+        case .cambodia: return SubdivisionsCambodiaLevel1.self
+        case .cameroon: return SubdivisionsCameroonLevel1.self
+        case .canada: return SubdivisionsCanadaLevel1.self
+        case .capeVerde: return SubdivisionsCapeVerdeLevel1.self
         case .caymanIslands: return nil
-        case .centralAfricanRepublic: return SubdivisionsCentralAfricanRepublic.self
-        case .chad: return SubdivisionsChad.self
-        case .chile: return SubdivisionsChile.self
+        case .centralAfricanRepublic: return SubdivisionsCentralAfricanRepublicLevel1.self
+        case .chad: return SubdivisionChadLevel1.self
+        case .chile: return SubdivisionsChileLevel1.self
         case .chinaMainland: return nil
         case .christmasIsland: return nil
         case .cocosIslands: return nil
-        case .colombia: return SubdivisionsColombia.self
+        case .colombia: return SubdivisionsColombiaLevel1.self
         case .cookIslands: return nil
-        case .comoros: return SubdivisionsComoros.self
+        case .comoros: return SubdivisionsComorosLevel1.self
         case .congoBrazzaville: return nil
         case .congoKinshasa: return nil
-        case .costaRica: return SubdivisionsCostaRica.self
-        case .croatia: return SubdivisionsCroatia.self
-        case .cuba: return SubdivisionsCuba.self
+        case .costaRica: return SubdivisionsCostaRicaLevel1.self
+        case .croatia: return SubdivisionsCroatiaLevel1.self
+        case .cuba: return SubdivisionsCubaLevel1.self
         case .curaçao: return nil
         case .cyprus: return nil
-        case .czechia: return SubdivisionsCzechRepublic.self
+        case .czechia: return SubdivisionsCzechRepublicLevel1.self
         
-        case .denmark: return SubdivisionsDenmark.self
-        case .djibouti: return SubdivisionsDjibouti.self
-        case .dominica: return SubdivisionsDominica.self
-        case .dominicanRepublic: return SubdivisionsDominicanRepublic.self
+        case .denmark: return SubdivisionsDenmarkLevel1.self
+        case .djibouti: return SubdivisionsDjiboutiLevel1.self
+        case .dominica: return SubdivisionsDominicaLevel1.self
+        case .dominicanRepublic: return SubdivisionsDominicanRepublicLevel1.self
             
-        case .ecuador: return SubdivisionsEcuador.self
-        case .egypt: return SubdivisionsEgypt.self
-        case .elSalvador: return SubdivisionsElSalvador.self
+        case .ecuador: return SubdivisionsEcuadorLevel1.self
+        case .egypt: return SubdivisionsEgyptLevel1.self
+        case .elSalvador: return SubdivisionsElSalvadorLevel1.self
         case .equatorialGuinea: return nil
-        case .eritrea: return SubdivisionsEritrea.self
-        case .estonia: return SubdivisionsEstonia.self
+        case .eritrea: return SubdivisionsEritreaLevel1.self
+        case .estonia: return SubdivisionsEstoniaLevel1.self
         case .eswatini: return nil
-        case .ethiopia: return SubdivisionsEthiopia.self
+        case .ethiopia: return SubdivisionsEthiopiaLevel1.self
         
         case .falklandIslands: return nil
         case .faroeIslands: return nil
-        case .fiji: return SubdivisionsFiji.self
-        case .finland: return SubdivisionsFinland.self
-        case .france: return SubdivisionsFrance.self
+        case .fiji: return SubdivisionsFijiLevel1.self
+        case .finland: return SubdivisionsFinlandLevel1.self
+        case .france: return SubdivisionsFranceLevel1.self
         case .frenchGuiana: return nil
         case .frenchPolynesia: return nil
         case .frenchSouthernTerritories: return nil
             
-        case .gabon: return SubdivisionsGabon.self
-        case .gambia: return SubdivisionsGambia.self
+        case .gabon: return SubdivisionsGabonLevel1.self
+        case .gambia: return SubdivisionsGambiaLevel1.self
         case .georgia: return nil
-        case .germany: return SubdivisionsGermany.self
-        case .ghana: return SubdivisionsGhana.self
+        case .germany: return SubdivisionsGermanyLevel1.self
+        case .ghana: return SubdivisionsGhanaLevel1.self
         case .gibraltar: return nil
-        case .greece: return SubdivisionsGreece.self
-        case .greenland: return SubdivisionsGreenland.self
-        case .grenada: return SubdivisionsGrenada.self
+        case .greece: return SubdivisionsGreeceLevel1.self
+        case .greenland: return SubdivisionsGreenlandLevel1.self
+        case .grenada: return SubdivisionsGrenadaLevel1.self
         case .guam: return nil
-        case .guadeloupe: return SubdivisionsGuadeloupe.self
-        case .guatemala: return SubdivisionsGuatemala.self
+        //case .guadeloupe: return SubdivisionsGuadeloupe.self
+        case .guatemala: return SubdivisionsGuatemalaLevel1.self
         case .guernsey: return nil
-        case .guinea: return SubdivisionsGuinea.self
+        case .guinea: return SubdivisionsGuineaLevel1.self
         case .guineaBissau: return nil
-        case .guyana: return SubdivisionsGuyana.self
+        case .guyana: return SubdivisionsGuyanaLevel1.self
             
-        case .haiti: return SubdivisionsHaiti.self
+        case .haiti: return SubdivisionsHaitiLevel1.self
         case .heardMcdonaldIslands: return nil
-        case .honduras: return SubdivisionsHonduras.self
+        case .honduras: return SubdivisionsHondurasLevel1.self
         case .hongKong: return nil
-        case .hungary: return SubdivisionsHungary.self
+        case .hungary: return SubdivisionsHungaryLevel1.self
         
-        case .iceland: return SubdivisionsIceland.self
-        case .india: return SubdivisionsIndia.self
-        case .indonesia: return SubdivisionsIndonesia.self
-        case .iraq: return SubdivisionsIraq.self
-        case .iran: return SubdivisionsIran.self
-        case .ireland: return SubdivisionsIreland.self
+        case .iceland: return SubdivisionsIcelandLevel1.self
+        case .india: return SubdivisionsIndiaLevel1.self
+        case .indonesia: return SubdivisionsIndonesiaLevel1.self
+        case .iraq: return SubdivisionsIraqLevel1.self
+        case .iran: return SubdivisionsIranLevel1.self
+        case .ireland: return SubdivisionsIrelandLevel1.self
         case .isleOfMan: return nil
-        case .israel: return SubdivisionsIsrael.self
-        case .italy: return SubdivisionsItaly.self
-        case .côteDIvoire: return SubdivisionsIvoryCoast.self
+        case .israel: return SubdivisionsIsraelLevel1.self
+        case .italy: return SubdivisionsItalyLevel1.self
+        case .côteDIvoire: return SubdivisionsIvoryCoastaLevel1.self
         
-        case .jamaica: return SubdivisionsJamaica.self
-        case .japan: return SubdivisionsJapan.self
-        case .jersey: return SubdivisionsJersey.self
-        case .jordan: return SubdivisionsJordan.self
+        case .jamaica: return SubdivisionsJamaicaLevel1.self
+        case .japan: return SubdivisionsJapanLevel1.self
+        case .jersey: return SubdivisionsJerseyLevel1.self
+        case .jordan: return SubdivisionsJordanLevel1.self
         
-        case .kazakhstan: return SubdivisionsKazakhstan.self
-        case .kenya: return SubdivisionsKenya.self
+        case .kazakhstan: return SubdivisionsKazakhstanLevel1.self
+        case .kenya: return SubdivisionsKenyaLevel1.self
         case .kiribati: return nil
-        case .kosovo: return SubdivisionsKosovo.self
-        case .kuwait: return SubdivisionsKuwait.self
-        case .kyrgyzstan: return SubdivisionsKyrgyzstan.self
+        case .kosovo: return SubdivisionsKosovoLevel1.self
+        case .kuwait: return SubdivisionsKuwaitLevel1.self
+        case .kyrgyzstan: return SubdivisionsKyrgyzstanLevel1.self
         
-        case .laos: return SubdivisionsLaos.self
-        case .latvia: return SubdivisionsLatvia.self
-        case .lebanon: return SubdivisionsLebanon.self
-        case .lesotho: return SubdivisionsLesotho.self
-        case .liberia: return SubdivisionsLiberia.self
-        case .libya: return SubdivisionsLibya.self
-        case .liechtenstein: return SubdivisionsLiechtenstein.self
-        case .lithuania: return SubdivisionsLithuania.self
-        case .luxembourg: return SubdivisionsLuxembourg.self
+        case .laos: return SubdivisionsLaosLevel1.self
+        case .latvia: return SubdivisionsLatviaLevel1.self
+        case .lebanon: return SubdivisionsLebanonLevel1.self
+        case .lesotho: return SubdivisionsLesothoLevel1.self
+        case .liberia: return SubdivisionsLiberiaLevel1.self
+        case .libya: return SubdivisionsLibyaLevel1.self
+        case .liechtenstein: return SubdivisionsLiechtensteinLevel1.self
+        case .lithuania: return SubdivisionsLithuaniaLevel1.self
+        case .luxembourg: return SubdivisionsLuxembourgLevel1.self
         
         case .macao: return nil
-        case .madagascar: return SubdivisionsMadagascar.self
-        case .malawi: return SubdivisionsMalawi.self
-        case .malaysia: return SubdivisionsMalaysia.self
-        case .maldives: return SubdivisionsMaldives.self
-        case .mali: return SubdivisionsMali.self
-        case .malta: return SubdivisionsMalta.self
-        case .marshallIslands: return SubdivisionsMarshallIslands.self
+        case .madagascar: return SubdivisionsMadagascarLevel1.self
+        case .malawi: return SubdivisionsMalawiLevel1.self
+        case .malaysia: return SubdivisionsMalaysiaLevel1.self
+        case .maldives: return SubdivisionsMaldivesLevel1.self
+        case .mali: return SubdivisionsMaliLevel1.self
+        case .malta: return SubdivisionsMaltaLevel1.self
+        case .marshallIslands: return SubdivisionsMarshallIslandsLevel1.self
         case .martinique: return nil
-        case .mauritania: return SubdivisionsMauritania.self
-        case .mauritius: return SubdivisionsMauritius.self
+        case .mauritania: return SubdivisionsMauritaniaLevel1.self
+        //case .mauritius: return SubdivisionsMauritius.self
         case .mayotte: return nil
-        case .mexico: return SubdivisionsMexico.self
-        case .micronesia: return SubdivisionsMicronesia.self
-        case .moldova: return SubdivisionsMoldova.self
-        case .monaco: return SubdivisionsMonaco.self
-        case .mongolia: return SubdivisionsMongolia.self
-        case .montenegro: return SubdivisionsMontenegro.self
+        case .mexico: return SubdivisionsMexicoLevel1.self
+        case .micronesia: return SubdivisionsMicronesiaLevel1.self
+        case .moldova: return SubdivisionsMoldovaLevel1.self
+        case .monaco: return SubdivisionsMonacoLevel1.self
+        case .mongolia: return SubdivisionsMongoliaLevel1.self
+        case .montenegro: return SubdivisionsMontenegroLevel1.self
         case .montserrat: return nil
-        case .morocco: return SubdivisionsMorocco.self
-        case .mozambique: return SubdivisionsMozambique.self
-        case .myanmar: return SubdivisionsMyanmar.self
+        case .morocco: return SubdivisionsMoroccoLevel1.self
+        case .mozambique: return SubdivisionsMozambiqueLevel1.self
+        case .myanmar: return SubdivisionsMyanmarLevel1.self
         
-        case .namibia: return SubdivisionsNamibia.self
-        case .nauru: return SubdivisionsNauru.self
-        case .nepal: return SubdivisionsNepal.self
-        case .netherlands: return SubdivisionsNetherlands.self
+        case .namibia: return SubdivisionsNamibiaLevel1.self
+        case .nauru: return SubdivisionsNauruLevel1.self
+        case .nepal: return SubdivisionsNepalLevel1.self
+        case .netherlands: return SubdivisionsNetherlandsLevel1.self
         case .newCaledonia: return nil
-        case .newZealand: return SubdivisionsNewZealand.self
-        case .nicaragua: return SubdivisionsNicaragua.self
-        case .niger: return SubdivisionsNiger.self
-        case .nigeria: return SubdivisionsNigeria.self
+        case .newZealand: return SubdivisionsNewZealandLevel1.self
+        case .nicaragua: return SubdivisionsNicaraguaLevel1.self
+        case .niger: return SubdivisionsNigerLevel1.self
+        case .nigeria: return SubdivisionsNigeriaLevel1.self
         case .niue: return nil
         case .norfolkIsland: return nil
         case .northernCyprus: return nil
         case .northernMarianaIslands: return nil
-        case .northKorea: return SubdivisionsNorthKorea.self
-        case .northMacedonia: return nil
-        case .norway: return SubdivisionsNorway.self
+        case .northKorea: return SubdivisionsNorthKoreaLevel1.self
+        case .northMacedonia: return SubdivisionsNorthMacedoniaLevel1.self
+        case .norway: return SubdivisionsNorwayLevel1.self
             
-        case .oman: return SubdivisionsOman.self
+        case .oman: return SubdivisionsOmanLevel1.self
             
-        case .pakistan: return SubdivisionsPakistan.self
-        case .palau: return SubdivisionsPalau.self
-        case .palestine: return SubdivisionsPalestine.self
-        case .panama: return SubdivisionsPanama.self
-        case .papuaNewGuinea: return SubdivisionsPapuaNewGuinea.self
-        case .paraguay: return SubdivisionsParaguay.self
-        case .peru: return SubdivisionsPeru.self
-        case .philippines: return SubdivisionsPhilippines.self
+        case .pakistan: return SubdivisionsPakistanLevel1.self
+        case .palau: return SubdivisionsPalauLevel1.self
+        case .palestine: return SubdivisionsPalestineLevel1.self
+        case .panama: return SubdivisionsPanamaLevel1.self
+        case .papuaNewGuinea: return SubdivisionsPapuaNewGuineaLevel1.self
+        case .paraguay: return SubdivisionsParaguayLevel1.self
+        case .peru: return SubdivisionsPeruLevel1.self
+        case .philippines: return SubdivisionsPhilippinesLevel1.self
         case .pitcairnIslands: return nil
-        case .poland: return SubdivisionsPoland.self
-        case .portugal: return SubdivisionsPortugal.self
+        case .poland: return SubdivisionsPolandLevel1.self
+        case .portugal: return SubdivisionsPortugalLevel1.self
         case .puertoRico: return nil
         
-        case .qatar: return SubdivisionsQatar.self
+        case .qatar: return SubdivisionsQatarLevel1.self
         
         case .réunion: return nil
-        case .romania: return SubdivisionsRomania.self
+        case .romania: return SubdivisionsRomaniaLevel1.self
         case .russia: return nil
-        case .rwanda: return SubdivisionsRwanda.self
+        case .rwanda: return SubdivisionsRwandaLevel1.self
         
-        case .saintKittsNevis: return SubdivisionsSaintKittsAndNevis.self
+        case .saintKittsNevis: return SubdivisionsSaintKittsAndNevisLevel1.self
         case .saintLucia: return nil
         case .saintMartin: return nil
         case .saintPierreMiquelon: return nil
         case .saintVincentGrenadines: return nil
-        case .samoa: return SubdivisionsSamoa.self
-        case .sãoToméPríncipe: return SubdivisionsSaoTomeAndPrincipe.self
+        case .samoa: return SubdivisionsSamoaLevel1.self
+        case .sãoToméPríncipe: return SubdivisionsSaoTomeAndPrincipeLevel1.self
         case .saudiArabia: return nil
-        case .senegal: return SubdivisionsSenegal.self
+        case .senegal: return SubdivisionsSenegalLevel1.self
         case .serbia: return nil
-        case .seychelles: return SubdivisionsSeychelles.self
+        case .seychelles: return SubdivisionsSeychellesLevel1.self
         case .sierraLeone: return nil
         case .singapore: return nil
         case .sintMaarten: return nil
-        case .slovakia: return SubdivisionsSlovakia.self
-        case .slovenia: return SubdivisionsSlovenia.self
+        case .slovakia: return SubdivisionsSlovakiaLevel1.self
+        case .slovenia: return SubdivisionsSloveniaLevel1.self
         case .solomonIslands: return nil
-        case .somalia: return SubdivisionsSomalia.self
-        case .southAfrica: return SubdivisionsSouthAfrica.self
+        case .somalia: return SubdivisionsSomaliaLevel1.self
+        case .southAfrica: return SubdivisionsSouthAfricaLevel1.self
         case .southGeorgiaSouthSandwichIslands: return nil
-        case .southKorea: return SubdivisionsSouthKorea.self
-        case .southSudan: return SubdivisionsSouthSudan.self
-        case .spain: return SubdivisionsSpain.self
-        case .sriLanka: return SubdivisionsSriLanka.self
+        case .southKorea: return SubdivisionsSouthKoreaLevel1.self
+        case .southSudan: return SubdivisionsSouthSudanLevel1.self
+        case .spain: return SubdivisionsSpainLevel1.self
+        case .sriLanka: return SubdivisionsSriLankaLevel1.self
         case .sudan: return nil
-        case .suriname: return SubdivisionsSuriname.self
+        case .suriname: return SubdivisionsSurinameLevel1.self
         case .svalbardJanMayen: return nil
-        case .sweden: return SubdivisionsSweden.self
-        case .switzerland: return SubdivisionsSwitzerland.self
-        case .syria: return SubdivisionsSyria.self
+        case .sweden: return SubdivisionsSwedenLevel1.self
+        case .switzerland: return SubdivisionsSwitzerlandLevel1.self
+        case .syria: return SubdivisionsSyriaLevel1.self
         
         case .tajikistan: return nil
-        case .tanzania: return SubdivisionsTanzania.self
-        case .thailand: return SubdivisionsThailand.self
-        case .timorLeste: return SubdivisionsTimorLeste.self
-        case .togo: return SubdivisionsTogo.self
+        case .tanzania: return SubdivisionsTanzaniaLevel1.self
+        case .thailand: return SubdivisionsThailandLevel1.self
+        case .timorLeste: return SubdivisionsTimorLesteLevel1.self
+        case .togo: return SubdivisionsTogoLevel1.self
         case .tokelau: return nil
-        case .tonga: return SubdivisionsTonga.self
+        case .tonga: return SubdivisionsTongaLevel1.self
         case .trinidadTobago: return nil
-        case .tunisia: return SubdivisionsTunisia.self
-        case .turkey: return SubdivisionsTurkey.self
-        case .turkmenistan: return SubdivisionsTurkmenistan.self
+        case .tunisia: return SubdivisionsTunisiaLevel1.self
+        case .turkey: return SubdivisionsTurkeyLevel1.self
+        case .turkmenistan: return SubdivisionsTurkmenistanLevel1.self
         case .turksCaicosIslands: return nil
         case .tuvalu: return nil
         
-        case .uganda: return SubdivisionsUganda.self
-        case .ukraine: return SubdivisionsUkraine.self
+        case .uganda: return SubdivisionsUgandaLevel1.self
+        case .ukraine: return SubdivisionsUkraineLevel1.self
         case .unitedArabEmirates: return nil
         case .unitedKingdom: return nil
-        case .unitedStates: return SubdivisionsUnitedStates.self
-        case .uruguay: return SubdivisionsUruguay.self
-        case .uzbekistan: return SubdivisionsUzbekistan.self
+        case .unitedStates: return SubdivisionsUnitedStatesLevel1.self
+        case .uruguay: return SubdivisionsUruguayLevel1.self
+        case .uzbekistan: return SubdivisionsUzbekistanLevel1.self
         
-        case .vanuatu: return SubdivisionsVanuatu.self
+        case .vanuatu: return SubdivisionsVanuatuLevel1.self
         case .vaticanCity: return nil
-        case .venezuela: return SubdivisionsVenezuela.self
-        case .vietnam: return SubdivisionsVietnam.self
+        case .venezuela: return SubdivisionsVenezuelaLevel1.self
+        case .vietnam: return SubdivisionsVietnamLevel1.self
         
-        case .yemen: return SubdivisionsYemen.self
+        case .yemen: return SubdivisionsYemenLevel1.self
         
-        case .zambia: return SubdivisionsZambia.self
-        case .zimbabwe: return SubdivisionsZimbabwe.self
+        case .zambia: return SubdivisionsZambiaLevel1.self
+        case .zimbabwe: return SubdivisionsZimbabweLevel1.self
         default: return nil
         }
     }

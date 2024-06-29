@@ -1,4 +1,5 @@
 {
+  "originHash" : "e071975007a16be0a16b6f6621a4e2d4d09c2e4d8dea68b2579fcb68f46afbdd",
   "pins" : [
     {
       "identity" : "swift-sovereign-states",
@@ -6,9 +7,18 @@
       "location" : "https://github.com/RandomHashTags/swift-sovereign-states.git",
       "state" : {
         "branch" : "main",
-        "revision" : "00d5a9ab32667b7c5174959ccc71ff5a5cd590ab"
+        "revision" : "a5ac04a969fca28fe19bc5696a513000ea19bf3e"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax",
+      "state" : {
+        "revision" : "303e5c5c36d6a558407d364878df131c3546fad8",
+        "version" : "510.0.2"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

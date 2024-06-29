@@ -8,7 +8,8 @@
 import Foundation
 import SwiftSovereignStates
 
-public enum SubdivisionsGuadeloupe : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Guadeloupe#Governance
+/*
+public enum SubdivisionsGuadeloupe : String, SovereignStateSubdivision { // https://en.wikipedia.org/wiki/Communes_of_the_Guadeloupe_department
     case anse_bertrand
     case baie_manhault
     case baillif
@@ -46,26 +47,8 @@ public enum SubdivisionsGuadeloupe : String, SovereignStateSubdivision { // http
         return Locale.Region.guadeloupe
     }
     
-    public var type : SovereignStateSubdivisionType {
-        return SovereignStateSubdivisionType.communes
-    }
-    
-    public var wikipediaURLSuffix : String? {
-        switch self {
-        case .la_desirade:
-            return "_(commune)"
-        case .pointe_noire,
-                .port_louis,
-                .saint_claude,
-                .saint_francois,
-                .saint_louis,
-                .sainte_anne,
-                .sainte_rose,
-                .trois_rivieres,
-                .vieux_fort:
-            return ",_Guadeloupe"
-        default:
-            return nil
-        }
+    public var type : Locale.Region.SubdivisionType {
+        return Locale.Region.SubdivisionType.commune
     }
 }
+*/
