@@ -74,7 +74,7 @@ final class SwiftSovereignStateSubdivisionsLevel1Tests : XCTestCase {
         XCTAssertEqual(minnesota.rawValue, "minnesota")
         XCTAssertEqual(minnesota.cacheID, "US-minnesota")
         XCTAssertEqual(minnesota.country, unitedStates)
-        XCTAssertEqual(SubdivisionsAfghanistan.badakhshan.country, Locale.Region.afghanistan)
+        XCTAssertEqual(SubdivisionsAfghanistanLevel1.badakhshan.region, Locale.Region.afghanistan)
         
         let test2:(any SovereignStateSubdivision)? = unitedStates.valueOfSubdivision("Minnesota", options: [])
         XCTAssert(minnesota.isEqual(test2))
@@ -83,7 +83,7 @@ final class SwiftSovereignStateSubdivisionsLevel1Tests : XCTestCase {
 
 extension SwiftSovereignStateSubdivisionsLevel1Tests {
     func test() {
-        let targetSubdivisions:[any SovereignStateSubdivision] = [SubdivisionsMexico.baja_california, SubdivisionsUnitedStates.california]
+        let targetSubdivisions:[any Locale.Region.SubdivisionProtocol] = [SubdivisionsMexicoLevel1.bajaCalifornia, SubdivisionsUnitedStatesLevel1.california]
         let mentionedString:String = "Baja California; California!"
         let mentioned:[any SovereignStateSubdivision] = SovereignStateSubdivisions.getAllMentioned(mentionedString, options: [])
         let notFound:[any SovereignStateSubdivision] = targetSubdivisions.filter({ subdivision in
